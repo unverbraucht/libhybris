@@ -136,6 +136,7 @@ test_input_LDADD = \
 	$(top_builddir)/common/libhybris-common.la \
 	$(top_builddir)/input/libis.la
 
+if WANT_WAYLANDs
 test_camera_SOURCES = test_camera.c
 test_camera_CFLAGS = \
 	-I$(top_srcdir)/include \
@@ -148,6 +149,7 @@ test_camera_LDADD = \
 	$(top_builddir)/input/libis.la \
 	$(top_builddir)/egl/platforms/common/libwayland-egl.la \
 	$(WAYLAND_CLIENT_LIBS)
+endif
 
 test_media_SOURCES = test_media.c
 test_media_CFLAGS = \
