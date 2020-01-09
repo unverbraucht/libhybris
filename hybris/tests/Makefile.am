@@ -136,7 +136,7 @@ test_input_LDADD = \
 	$(top_builddir)/common/libhybris-common.la \
 	$(top_builddir)/input/libis.la
 
-if WANT_WAYLANDs
+if WANT_WAYLAND
 test_camera_SOURCES = test_camera.c
 test_camera_CFLAGS = \
 	-I$(top_srcdir)/include \
