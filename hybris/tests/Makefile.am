@@ -7,7 +7,6 @@ bin_PROGRAMS = \
 	test_sensors \
 	test_input \
 	test_lights \
-	test_camera \
 	test_vibrator \
 	test_media \
 	test_recorder \
@@ -137,6 +136,7 @@ test_input_LDADD = \
 	$(top_builddir)/input/libis.la
 
 if WANT_WAYLAND
+bin_PROGRAMS += test_camera
 test_camera_SOURCES = test_camera.c
 test_camera_CFLAGS = \
 	-I$(top_srcdir)/include \
